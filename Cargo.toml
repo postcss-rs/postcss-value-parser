@@ -1,5 +1,5 @@
 [package]
-name = "postcss_rs_value_parser"
+name = "postcss_value_parser"
 version = "0.0.1"
 description = "Transforms css values into the tree"
 authors = ["the postcss-rs authors"]
