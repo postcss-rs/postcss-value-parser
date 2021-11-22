@@ -1,5 +1,4 @@
-use postcss_rs_value_parser::unit;
-use postcss_rs_value_parser::Dimension;
+use postcss_value_parser::unit::{unit, Dimension};
 
 #[test]
 fn test_unit() {
