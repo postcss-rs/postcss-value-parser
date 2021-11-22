@@ -65,6 +65,7 @@ pub fn unit(value: &str) -> Option<Dimension> {
 
 /// Check if three code points would start a number
 /// https://www.w3.org/TR/css-syntax-3/#starts-with-a-number
+#[inline]
 fn start_a_number(value: &str) -> bool {
   match value.as_bytes().get(0) {
     Some(b'+' | b'-') => match value.as_bytes().get(1) {
