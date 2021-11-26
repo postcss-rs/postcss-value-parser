@@ -23,23 +23,16 @@ pub struct UnicodeRange<'a> {
 pub struct Div<'a> {
   pub source_index: u32,
   pub value: Cow<'a, str>,
-  pub before: Cow<'a, str>,
-  pub after: Cow<'a, str>,
 }
 
 pub struct String<'a> {
   pub source_index: u32,
   pub value: Cow<'a, str>,
-  pub quote: u8,
-  pub unclosed: bool,
 }
 
 pub struct Function<'a> {
   pub source_index: u32,
   pub value: Cow<'a, str>,
-  pub before: Cow<'a, str>,
-  pub after: Cow<'a, str>,
-  pub unclosed: bool,
   pub nodes: Vec<Node<'a>>,
 }
 
