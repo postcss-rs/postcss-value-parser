@@ -5,6 +5,7 @@ use once_cell::sync::Lazy;
 use std::cell::RefCell;
 use std::clone::Clone;
 use std::cmp::{Eq, PartialEq};
+use std::hint::unreachable_unchecked;
 
 static FINDER_END_OF_COMMENT: Lazy<Finder<'static>> = Lazy::new(|| Finder::new("*/"));
 
@@ -245,7 +246,7 @@ const fn get_str(ch: u8) -> &'static str {
     b'/' => "/",
     b',' => ",",
     b':' => ":",
-    _ => unreachable!(),
+    _ => unsafe { unreachable_unchecked() },
   }
 }
 
@@ -257,7 +258,7 @@ const fn get_token_type(ch: u8) -> TokenType {
     b'/' => TokenType::Div,
     b',' => TokenType::Div,
     b':' => TokenType::Div,
-    _ => unreachable!(),
+    _ => unsafe { unreachable_unchecked() },
   }
 }
 
